@@ -204,7 +204,7 @@ function EspObject:Update()
     -- Whitelist optimization using hash table
     local whitelist = interface.whitelist
     self.enabled = self.options.enabled and self.character and 
-        (not next(whitelist) or whitelist[self.player.UserId]
+        (not next(whitelist) or whitelist[self.player.UserId])
 
     local head = self.enabled and findFirstChild(self.character, "Head")
     if not head then
@@ -423,7 +423,7 @@ function ChamObject:Update()
     local character = interface.getCharacter(self.player)
     local options = interface.teamSettings[interface.isFriendly(self.player) and "friendly" or "enemy"]
     local enabled = options.enabled and character and not
-        (next(interface.whitelist) and not interface.whitelist[self.player.UserId]
+        (next(interface.whitelist) and not interface.whitelist[self.player.UserId])
 
     self.highlight.Enabled = enabled and options.chams
     if self.highlight.Enabled then
