@@ -13,10 +13,6 @@ function HighlightPool.new()
 	for i = 1, max do
 		local hl = Instance.new("Highlight")
 		hl.Enabled = false
-		hl.Adornee = nil
-		hl.FillColor = Color3.fromRGB(255, 255, 0)
-		hl.OutlineColor = Color3.new(1, 1, 1)
-		hl.Archivable = true
 		table.insert(self.pool, hl)
 	end
 
